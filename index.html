@@ -20,7 +20,6 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 60px 20px;
-
     background-color: #2a2a2a;
 
     background-image:
@@ -45,7 +44,7 @@ body {
     background-blend-mode: overlay;
 }
 
-/* Dusty edge */
+/* Dusty vignette edges */
 body::after {
     content: "";
     position: fixed;
@@ -56,18 +55,27 @@ body::after {
         rgba(0,0,0,0.7) 100%);
 }
 
-/* ===== CONTENT ===== */
+/* ===== CONTAINER ===== */
 .container {
     max-width: 800px;
     margin: auto;
 }
 
-h1 {
-    font-size: 46px;
-    margin-bottom: 25px;
-    text-shadow: 0 0 6px rgba(255,255,255,0.6);
+/* ===== LOGO ===== */
+.logo-wrapper {
+    margin-bottom: 40px;
 }
 
+.logo {
+    max-width: 450px;
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
+}
+
+/* ===== INTRO TEXT ===== */
 .intro {
     font-size: 24px;
     line-height: 1.7;
@@ -75,7 +83,7 @@ h1 {
     text-shadow: 0 0 4px rgba(255,255,255,0.4);
 }
 
-/* ===== BUTTON LAYOUT ===== */
+/* ===== BUTTON GRID ===== */
 .button-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -97,7 +105,6 @@ h1 {
     border: 3px solid;
     border-radius: 14px;
 
-    /* rough chalk edge effect */
     box-shadow:
         0 0 0 2px rgba(255,255,255,0.05),
         0 0 8px currentColor;
@@ -105,7 +112,6 @@ h1 {
     transition: 0.25s ease;
 }
 
-/* Slight wobble for hand-drawn look */
 .button:nth-child(odd) {
     transform: rotate(-0.5deg);
 }
@@ -137,7 +143,6 @@ h1 {
 }
 
 @media (min-width: 768px) {
-    h1 { font-size: 52px; }
     .intro { font-size: 26px; }
 }
 
@@ -148,13 +153,18 @@ h1 {
 
 <div class="container">
 
-    <h1>O'Brien Crew Jiu-Jitsu 🥋</h1>
+    <!-- LOGO AT TOP -->
+    <div class="logo-wrapper">
+        <img src="logo.jpg" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
+    </div>
 
+    <!-- INTRO TEXT -->
     <div class="intro">
-        Hi! Welcome to our landing page where you can follow and support our jiu-jitsu journey.  
+        Hi! Welcome to our landing page where you can follow and support us on our jiu-jitsu journey.
         We are a family of 6 rolling through life one mat at a time, creating content and living life.
     </div>
 
+    <!-- BUTTONS -->
     <div class="button-grid">
 
         <a class="button kofi" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">
@@ -185,7 +195,7 @@ h1 {
 
     <div class="scripture">
         “For God did not send His Son into the world to condemn the world,
-        but to save the world through Him.”  
+        but to save the world through Him.”
         <br><br>
         — John 3:17
     </div>
