@@ -9,34 +9,33 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px 20px;
-    color: white;
     margin: 0;
+    padding: 60px 20px;
+    color: white;
 
-    /* Real Chalkboard Background */
-    background: url("chalkboard.jpg") center center / cover no-repeat fixed;
+    /* USE YOUR LOGO IMAGE AS BACKGROUND */
+    background: url("logo.jpg") center center / cover no-repeat fixed;
 }
 
-/* Add slight dark overlay for readability */
+/* Dark overlay for readability */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.65);
     z-index: -1;
 }
 
-/* Logo */
-.logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+/* Content wrapper */
+.content {
+    max-width: 700px;
+    margin: auto;
 }
 
 /* Heading */
 h1 {
     margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
 }
 
 p {
@@ -56,7 +55,7 @@ a {
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 a:hover {
@@ -71,9 +70,6 @@ a:hover {
     border-top: 2px solid rgba(255,255,255,0.4);
     font-size: 16px;
     font-style: italic;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
 }
 </style>
@@ -81,8 +77,7 @@ a:hover {
 </head>
 <body>
 
-<!-- Logo -->
-<img src="logo.png" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
+<div class="content">
 
 <h1>O'Brien Crew Jiu-Jitsu 🥋</h1>
 <p>We are a family of 6 rolling through life one mat at a time. Support our family journey and follow us on social media!</p>
@@ -99,6 +94,8 @@ a:hover {
     but to save the world through Him.”  
     <br><br>
     — John 3:17
+</div>
+
 </div>
 
 </body>
