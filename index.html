@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O'Brien Crew Jiu-Jitsu</title>
 
+<!-- Handwritten Font -->
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<!-- Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -41,7 +45,7 @@ body {
     background-blend-mode: overlay;
 }
 
-/* Dusty vignette edges */
+/* Dusty edge */
 body::after {
     content: "";
     position: fixed;
@@ -54,12 +58,12 @@ body::after {
 
 /* ===== CONTENT ===== */
 .container {
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 46px;
     margin-bottom: 25px;
     text-shadow: 0 0 6px rgba(255,255,255,0.6);
 }
@@ -71,36 +75,59 @@ h1 {
     text-shadow: 0 0 4px rgba(255,255,255,0.4);
 }
 
-/* ===== CHALK CIRCLE BUTTONS ===== */
+/* ===== BUTTON LAYOUT ===== */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+/* ===== CHALK STYLE BUTTONS ===== */
 .button {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 140px;
-    margin: 20px auto;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 18px 15px;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 50%;
-    border: 4px solid;
+
+    border: 3px solid;
+    border-radius: 14px;
+
+    /* rough chalk edge effect */
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.05),
+        0 0 8px currentColor;
+
     transition: 0.25s ease;
-    text-align: center;
-    padding: 15px;
 }
 
-/* Chalk colors */
+/* Slight wobble for hand-drawn look */
+.button:nth-child(odd) {
+    transform: rotate(-0.5deg);
+}
+
+.button:nth-child(even) {
+    transform: rotate(0.5deg);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 12px currentColor,
+        0 0 25px currentColor;
+}
+
+/* Chalk Colors */
 .kofi { border-color: #00b9fe; color: #00b9fe; }
 .instagram { border-color: #ff2da1; color: #ff2da1; }
 .youtube { border-color: #ff3b3b; color: #ff3b3b; }
 .facebook { border-color: #3b82f6; color: #3b82f6; }
 .tiktok { border-color: #00f2ea; color: #00f2ea; }
 .email { border-color: #ffd93b; color: #ffd93b; }
-
-.button:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px currentColor;
-}
 
 /* Scripture */
 .scripture {
@@ -110,7 +137,7 @@ h1 {
 }
 
 @media (min-width: 768px) {
-    h1 { font-size: 50px; }
+    h1 { font-size: 52px; }
     .intro { font-size: 26px; }
 }
 
@@ -128,12 +155,33 @@ h1 {
         We are a family of 6 rolling through life one mat at a time, creating content and living life.
     </div>
 
-    <a class="button kofi" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">Ko-fi</a>
-    <a class="button instagram" href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">Instagram</a>
-    <a class="button youtube" href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">YouTube</a>
-    <a class="button facebook" href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">Facebook</a>
-    <a class="button tiktok" href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">TikTok</a>
-    <a class="button email" href="mailto:obriencrewjiujitsu@gmail.com">Email</a>
+    <div class="button-grid">
+
+        <a class="button kofi" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">
+            <i class="fa-solid fa-mug-hot"></i> Ko-fi
+        </a>
+
+        <a class="button instagram" href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a class="button youtube" href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+
+        <a class="button facebook" href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+
+        <a class="button tiktok" href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+
+        <a class="button email" href="mailto:obriencrewjiujitsu@gmail.com">
+            <i class="fa-solid fa-envelope"></i> Email
+        </a>
+
+    </div>
 
     <div class="scripture">
         “For God did not send His Son into the world to condemn the world,
