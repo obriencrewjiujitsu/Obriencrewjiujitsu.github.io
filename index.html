@@ -13,24 +13,30 @@ body {
     color: white;
     margin: 0;
 
-    /* Chalkboard Background */
-    background-color: #1a1a1a;
-    background-image: 
-        radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 4px 4px, 6px 6px;
+    /* Real Chalkboard Background */
+    background: url("chalkboard.jpg") center center / cover no-repeat fixed;
+}
+
+/* Add slight dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
 }
 
 /* Logo */
 .logo {
-    max-width: 280px;
+    max-width: 300px;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
 }
 
-/* Headings */
+/* Heading */
 h1 {
     margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
 p {
@@ -50,16 +56,15 @@ a {
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
 
 a:hover {
-    background: #002680; /* darker blue hover */
+    background: #002680;
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* Scripture Section */
+/* Scripture */
 .scripture {
     margin-top: 70px;
     padding: 25px 15px;
@@ -70,7 +75,6 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-    opacity: 0.9;
 }
 </style>
 
