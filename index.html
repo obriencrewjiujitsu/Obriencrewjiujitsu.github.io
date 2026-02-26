@@ -10,7 +10,6 @@
 
 <style>
 
-/* ===== CHALKBOARD BACKGROUND ===== */
 body {
     margin: 0;
     font-family: 'Patrick Hand', cursive;
@@ -37,13 +36,11 @@ body::after {
     background: radial-gradient(circle at center, transparent 55%, rgba(0,0,0,0.7) 100%);
 }
 
-/* ===== CONTAINER ===== */
 .container {
     max-width: 900px;
     margin: auto;
 }
 
-/* ===== LOGO ===== */
 .logo-wrapper {
     margin-bottom: 40px;
 }
@@ -57,7 +54,6 @@ body::after {
     filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
 }
 
-/* ===== INTRO ===== */
 .intro {
     font-size: 24px;
     line-height: 1.7;
@@ -65,7 +61,6 @@ body::after {
     text-shadow: 0 0 4px rgba(255,255,255,0.4);
 }
 
-/* ===== BUTTON GRID ===== */
 .button-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,7 +73,6 @@ body::after {
     }
 }
 
-/* ===== CHALK BUTTONS ===== */
 .button {
     display: flex;
     align-items: center;
@@ -110,20 +104,15 @@ body::after {
 .email { border-color: #ffd93b; color: #ffd93b; }
 
 @media (min-width: 769px) {
-    .button-grid a:nth-child(5) {
-        grid-column: 2;
-    }
-    .button-grid a:nth-child(6) {
-        grid-column: 3;
-    }
+    .button-grid a:nth-child(5) { grid-column: 2; }
+    .button-grid a:nth-child(6) { grid-column: 3; }
 }
 
-/* Scripture */
 .scripture {
     margin-top: 60px;
     font-size: 18px;
-    opacity: 0.9;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 </style>
@@ -133,18 +122,15 @@ body::after {
 
 <div class="container">
 
-    <!-- LOGO -->
     <div class="logo-wrapper">
         <img src="Logo.jpg" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
     </div>
 
-    <!-- INTRO -->
     <div class="intro">
-        Hi! Welcome to our landing page where you can follow and support us on our jiu-jitsu journey.
+        Hi! Welcome to our landing page where you can follow and support our jiu-jitsu journey.
         We are a family of 6 rolling through life one mat at a time, creating content and living life.
     </div>
 
-    <!-- BUTTONS -->
     <div class="button-grid">
 
         <a class="button kofi" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">
@@ -174,15 +160,9 @@ body::after {
     </div>
 
     <div class="scripture">
-        “For God did not send His Son into the world to condemn the world,
-        but to save the world through Him.”
+        “For God did not send His Son into the world to condemn the world, but to save the world through Him.” John 3:17
         <br><br>
-        — John 3:17
-        <br><br><br>
-        “If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead,
-        you will be saved.”
-        <br><br>
-        — Romans 10:9
+        “If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.” Romans 10:9
     </div>
 
 </div>
