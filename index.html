@@ -7,14 +7,14 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
-    padding: 60px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     color: white;
+    padding: 60px 20px;
 
-    /* USE YOUR LOGO IMAGE AS BACKGROUND */
-    background: url("logo.jpg") center center / cover no-repeat fixed;
+    /* Chalkboard background */
+    background: url("chalkboard.jpg") center/cover no-repeat fixed;
 }
 
 /* Dark overlay for readability */
@@ -22,80 +22,87 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.6);
     z-index: -1;
 }
 
-/* Content wrapper */
-.content {
-    max-width: 700px;
-    margin: auto;
+/* Logo styling */
+.logo {
+    width: 280px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 25px auto;
 }
 
 /* Heading */
 h1 {
-    margin-bottom: 10px;
-    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+    margin-bottom: 15px;
 }
 
+/* Paragraph */
 p {
-    margin-bottom: 40px;
-    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 /* Buttons */
 a {
     display: block;
     margin: 12px auto;
-    padding: 14px 20px;
+    padding: 14px;
+    width: 260px;
     background: #0033A0; /* Gracie Barra Blue */
     color: white;
     text-decoration: none;
-    width: 260px;
     border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    transition: 0.25s ease;
 }
 
 a:hover {
     background: #002680;
-    transform: scale(1.05);
+    transform: translateY(-2px);
 }
 
 /* Scripture */
 .scripture {
-    margin-top: 70px;
-    padding: 25px 15px;
-    border-top: 2px solid rgba(255,255,255,0.4);
-    font-size: 16px;
+    margin-top: 60px;
     font-style: italic;
+    font-size: 14px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.6;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="content">
+<!-- LOGO AT TOP -->
+<img src="logo.jpg" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
 
 <h1>O'Brien Crew Jiu-Jitsu 🥋</h1>
-<p>We are a family of 6 rolling through life one mat at a time. Support our family journey and follow us on social media!</p>
 
-<a href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">☕ Support Us on Ko-fi</a>
-<a href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">📸 Instagram</a>
-<a href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">▶️ YouTube</a>
-<a href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">📘 Facebook</a>
-<a href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">🎵 TikTok</a>
-<a href="mailto:obriencrewjiujitsu@gmail.com">📧 Email</a>
+<p>
+We are a family of six rolling through life one mat at a time. 
+Support our journey and follow us on social media.
+</p>
+
+<a href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">Support Us on Ko-fi</a>
+<a href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">Instagram</a>
+<a href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">YouTube</a>
+<a href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">Facebook</a>
+<a href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">TikTok</a>
+<a href="mailto:obriencrewjiujitsu@gmail.com">Email</a>
 
 <div class="scripture">
-    “For God did not send His Son into the world to condemn the world, 
-    but to save the world through Him.”  
-    <br><br>
-    — John 3:17
-</div>
-
+“For God did not send His Son into the world to condemn the world, 
+but to save the world through Him.”  
+<br><br>
+— John 3:17
 </div>
 
 </body>
