@@ -9,17 +9,26 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #0033A0; /* Gracie Barra Blue */
     padding: 50px 20px;
     color: white;
     margin: 0;
+
+    /* Chalkboard Background */
+    background-color: #1a1a1a;
+    background-image: 
+        radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 4px 4px, 6px 6px;
 }
 
+/* Logo */
 .logo {
-    max-width: 200px;
+    max-width: 280px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
 }
 
+/* Headings */
 h1 {
     margin-bottom: 10px;
 }
@@ -29,35 +38,39 @@ p {
     font-size: 18px;
 }
 
+/* Buttons */
 a {
     display: block;
     margin: 12px auto;
-    padding: 12px 20px;
-    background: white;
-    color: #0033A0;
+    padding: 14px 20px;
+    background: #0033A0; /* Gracie Barra Blue */
+    color: white;
     text-decoration: none;
-    width: 250px;
+    width: 260px;
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 a:hover {
-    background: #f2f2f2;
+    background: #002680; /* darker blue hover */
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 /* Scripture Section */
 .scripture {
     margin-top: 70px;
     padding: 25px 15px;
-    border-top: 2px solid white;
+    border-top: 2px solid rgba(255,255,255,0.4);
     font-size: 16px;
     font-style: italic;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+    opacity: 0.9;
 }
 </style>
 
