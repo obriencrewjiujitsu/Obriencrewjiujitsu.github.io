@@ -5,137 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O'Brien Crew Jiu-Jitsu</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
 <style>
+
+/* ===== CHALKBOARD BACKGROUND ===== */
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #ffffff;
-    color: #1c1e21;
-}
-
-/* COVER SECTION */
-.cover img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
-}
-
-/* PROFILE IMAGE */
-.profile-wrapper {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 6px solid #ffffff;
-    margin-top: -75px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-/* MAIN CONTAINER */
-.container {
-    max-width: 650px;
-    margin: 20px auto 60px auto;
-    padding: 0 20px;
+    font-family: 'Patrick Hand', cursive;
+    color: #ffffff;
     text-align: center;
+    padding: 60px 20px;
+
+    background-color: #2a2a2a;
+
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.05) 0%, transparent 60%),
+        radial-gradient(circle at 85% 75%, rgba(255,255,255,0.04) 0%, transparent 65%),
+        radial-gradient(circle at 40% 90%, rgba(255,255,255,0.03) 0%, transparent 70%),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.015) 0px,
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.01) 0px,
+            rgba(255,255,255,0.01) 2px,
+            transparent 2px,
+            transparent 6px
+        );
+
+    background-blend-mode: overlay;
+}
+
+/* Dusty vignette edges */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center,
+        transparent 55%,
+        rgba(0,0,0,0.7) 100%);
+}
+
+/* ===== CONTENT ===== */
+.container {
+    max-width: 700px;
+    margin: auto;
 }
 
 h1 {
-    margin: 15px 0 10px 0;
-    font-size: 26px;
+    font-size: 44px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.6);
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #444;
+.intro {
+    font-size: 24px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    text-shadow: 0 0 4px rgba(255,255,255,0.4);
 }
 
-/* BUTTONS */
+/* ===== CHALK CIRCLE BUTTONS ===== */
 .button {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    margin: 10px auto;
-    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    border: 2px solid #0033A0; /* Gracie Barra Blue */
-    color: #0033A0;
-    transition: 0.2s ease;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 4px solid;
+    transition: 0.25s ease;
+    text-align: center;
+    padding: 15px;
 }
+
+/* Chalk colors */
+.kofi { border-color: #00b9fe; color: #00b9fe; }
+.instagram { border-color: #ff2da1; color: #ff2da1; }
+.youtube { border-color: #ff3b3b; color: #ff3b3b; }
+.facebook { border-color: #3b82f6; color: #3b82f6; }
+.tiktok { border-color: #00f2ea; color: #00f2ea; }
+.email { border-color: #ffd93b; color: #ffd93b; }
 
 .button:hover {
-    background: #0033A0;
-    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px currentColor;
 }
 
 /* Scripture */
 .scripture {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
+    margin-top: 60px;
+    font-size: 18px;
+    opacity: 0.85;
 }
 
-/* Desktop Adjustments */
 @media (min-width: 768px) {
-    .cover img {
-        height: 320px;
-    }
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-        margin-top: -90px;
-    }
-    h1 {
-        font-size: 30px;
-    }
+    h1 { font-size: 50px; }
+    .intro { font-size: 26px; }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- COVER PHOTO -->
-<div class="cover">
-    <img src="cover.jpg" alt="Cover Photo">
-</div>
-
-<!-- PROFILE LOGO -->
-<div class="profile-wrapper">
-    <img src="logo.png" class="profile-pic" alt="Logo">
-</div>
-
-<!-- CONTENT -->
 <div class="container">
+
     <h1>O'Brien Crew Jiu-Jitsu 🥋</h1>
 
-    <p>
-        We are a family of six rolling through life one mat at a time. 
-        Support our journey and follow us on social media.
-    </p>
+    <div class="intro">
+        Hi! Welcome to our landing page where you can follow and support us on our jiu-jitsu journey.  
+        We are a family of 6 rolling through life one mat at a time, creating content and living life.
+    </div>
 
-    <a class="button" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">Support Us on Ko-fi</a>
-    <a class="button" href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">Instagram</a>
-    <a class="button" href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">YouTube</a>
-    <a class="button" href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">Facebook</a>
-    <a class="button" href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">TikTok</a>
-    <a class="button" href="mailto:obriencrewjiujitsu@gmail.com">Email</a>
+    <a class="button kofi" href="https://ko-fi.com/obriencrewjiujitsu" target="_blank">Ko-fi</a>
+    <a class="button instagram" href="https://www.instagram.com/obriencrewjiujitsu" target="_blank">Instagram</a>
+    <a class="button youtube" href="https://www.youtube.com/@obriencrewjiujitsu" target="_blank">YouTube</a>
+    <a class="button facebook" href="https://www.facebook.com/share/1C6g3mJtG8/" target="_blank">Facebook</a>
+    <a class="button tiktok" href="https://www.tiktok.com/@obrien.crew.jiuji" target="_blank">TikTok</a>
+    <a class="button email" href="mailto:obriencrewjiujitsu@gmail.com">Email</a>
 
     <div class="scripture">
-        “For God did not send His Son into the world to condemn the world, 
+        “For God did not send His Son into the world to condemn the world,
         but to save the world through Him.”  
         <br><br>
         — John 3:17
     </div>
+
 </div>
 
 </body>
