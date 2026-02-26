@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O'Brien Crew Jiu-Jitsu</title>
 
-<!-- Handwritten Font -->
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-
-<!-- Social Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -26,38 +23,23 @@ body {
         radial-gradient(circle at 15% 20%, rgba(255,255,255,0.05) 0%, transparent 60%),
         radial-gradient(circle at 85% 75%, rgba(255,255,255,0.04) 0%, transparent 65%),
         radial-gradient(circle at 40% 90%, rgba(255,255,255,0.03) 0%, transparent 70%),
-        repeating-linear-gradient(
-            45deg,
-            rgba(255,255,255,0.015) 0px,
-            rgba(255,255,255,0.015) 1px,
-            transparent 1px,
-            transparent 4px
-        ),
-        repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,0.01) 0px,
-            rgba(255,255,255,0.01) 2px,
-            transparent 2px,
-            transparent 6px
-        );
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 4px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 2px, transparent 2px, transparent 6px);
 
     background-blend-mode: overlay;
 }
 
-/* Dusty vignette edges */
 body::after {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(circle at center,
-        transparent 55%,
-        rgba(0,0,0,0.7) 100%);
+    background: radial-gradient(circle at center, transparent 55%, rgba(0,0,0,0.7) 100%);
 }
 
 /* ===== CONTAINER ===== */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -67,7 +49,7 @@ body::after {
 }
 
 .logo {
-    max-width: 450px;
+    max-width: 480px;
     width: 95%;
     height: auto;
     display: block;
@@ -75,7 +57,7 @@ body::after {
     filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
 }
 
-/* ===== INTRO TEXT ===== */
+/* ===== INTRO ===== */
 .intro {
     font-size: 24px;
     line-height: 1.7;
@@ -86,48 +68,40 @@ body::after {
 /* ===== BUTTON GRID ===== */
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* ===== CHALK STYLE BUTTONS ===== */
+@media (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CHALK BUTTONS ===== */
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     padding: 18px 15px;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-
     border: 3px solid;
     border-radius: 14px;
-
-    box-shadow:
-        0 0 0 2px rgba(255,255,255,0.05),
-        0 0 8px currentColor;
-
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.05), 0 0 8px currentColor;
     transition: 0.25s ease;
 }
 
-.button:nth-child(odd) {
-    transform: rotate(-0.5deg);
-}
-
-.button:nth-child(even) {
-    transform: rotate(0.5deg);
-}
+.button:nth-child(odd) { transform: rotate(-0.5deg); }
+.button:nth-child(even) { transform: rotate(0.5deg); }
 
 .button:hover {
     transform: scale(1.05);
-    box-shadow:
-        0 0 12px currentColor,
-        0 0 25px currentColor;
+    box-shadow: 0 0 12px currentColor, 0 0 25px currentColor;
 }
 
-/* Chalk Colors */
 .kofi { border-color: #00b9fe; color: #00b9fe; }
 .instagram { border-color: #ff2da1; color: #ff2da1; }
 .youtube { border-color: #ff3b3b; color: #ff3b3b; }
@@ -135,15 +109,21 @@ body::after {
 .tiktok { border-color: #00f2ea; color: #00f2ea; }
 .email { border-color: #ffd93b; color: #ffd93b; }
 
+@media (min-width: 769px) {
+    .button-grid a:nth-child(5) {
+        grid-column: 2;
+    }
+    .button-grid a:nth-child(6) {
+        grid-column: 3;
+    }
+}
+
 /* Scripture */
 .scripture {
     margin-top: 60px;
     font-size: 18px;
-    opacity: 0.85;
-}
-
-@media (min-width: 768px) {
-    .intro { font-size: 26px; }
+    opacity: 0.9;
+    line-height: 1.6;
 }
 
 </style>
@@ -153,12 +133,12 @@ body::after {
 
 <div class="container">
 
-    <!-- LOGO AT TOP -->
+    <!-- LOGO -->
     <div class="logo-wrapper">
-        <img src="logo.jpg" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
+        <img src="Logo.jpg" alt="O'Brien Crew Jiu-Jitsu Logo" class="logo">
     </div>
 
-    <!-- INTRO TEXT -->
+    <!-- INTRO -->
     <div class="intro">
         Hi! Welcome to our landing page where you can follow and support us on our jiu-jitsu journey.
         We are a family of 6 rolling through life one mat at a time, creating content and living life.
@@ -198,6 +178,11 @@ body::after {
         but to save the world through Him.”
         <br><br>
         — John 3:17
+        <br><br><br>
+        “If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead,
+        you will be saved.”
+        <br><br>
+        — Romans 10:9
     </div>
 
 </div>
